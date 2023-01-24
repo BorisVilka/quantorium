@@ -1,0 +1,285 @@
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/organ_ico" />
+
+        <Button
+            android:id="@+id/Play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:backgroundTint="#4ecca3"
+            android:text="Play"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/training"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4ecca3"
+            android:text="traning"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/Play"
+            app:layout_constraintEnd_toStartOf="@+id/stop"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/Play"
+            app:layout_constraintTop_toTopOf="@+id/Play"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4ECCA3"
+            android:text="stop"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/training"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/training"
+            app:layout_constraintTop_toTopOf="@+id/training"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="339dp"
+            android:layout_height="99dp"
+            android:rotationX="15"
+            android:scaleX="2.35"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="@+id/imageView2"
+            app:layout_constraintHorizontal_bias="0.492"
+            app:layout_constraintStart_toStartOf="@+id/imageView2"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.736"
+            app:srcCompat="@drawable/photo1664293313" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4ecca3"
+            android:text="Помощь"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/chooser"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.787"
+            app:layout_constraintStart_toEndOf="@+id/chooser"
+            app:layout_constraintTop_toTopOf="@+id/chooser"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/chooser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4ecca3"
+            android:text="Выбрать аудио"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.064"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView2"
+            app:layout_constraintVertical_bias="0.055" />
+
+        <HorizontalScrollView
+            android:id="@+id/scroll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+
+            app:layout_constraintTop_toBottomOf="@+id/chooser"
+            app:layout_constraintVertical_bias="0.167">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/note"
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/noti1_auto_x2"
+                    tools:layout_editor_absoluteX="-565dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <CheckBox
+            android:id="@+id/chB1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:buttonTint="#000000"
+            android:checked="false"
+            android:clickable="false"
+            app:layout_constraintBottom_toTopOf="@+id/Play"
+            app:layout_constraintEnd_toStartOf="@+id/chB3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/chooser"
+            app:layout_constraintVertical_bias="0.87" />
+
+        <CheckBox
+            android:id="@+id/chB3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB1"
+            app:layout_constraintEnd_toStartOf="@+id/chB5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB1"
+            app:layout_constraintTop_toTopOf="@+id/chB1" />
+
+        <CheckBox
+            android:id="@+id/chB5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB3"
+            app:layout_constraintEnd_toStartOf="@+id/chB6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB3"
+            app:layout_constraintTop_toTopOf="@+id/chB3"
+            app:layout_constraintVertical_bias="0.872" />
+
+        <CheckBox
+            android:id="@+id/chB6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB5"
+            app:layout_constraintEnd_toStartOf="@+id/chB8"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB5"
+            app:layout_constraintTop_toTopOf="@+id/chB5"
+            app:layout_constraintVertical_bias="0.871" />
+
+        <CheckBox
+            android:id="@+id/chB8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB6"
+            app:layout_constraintEnd_toStartOf="@+id/chB10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB6"
+            app:layout_constraintTop_toTopOf="@+id/chB6"
+            app:layout_constraintVertical_bias="0.872" />
+
+        <CheckBox
+            android:id="@+id/chB10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB8"
+            app:layout_constraintEnd_toStartOf="@+id/chB12"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB8"
+            app:layout_constraintTop_toTopOf="@+id/chB8"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/chB12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB10"
+            app:layout_constraintEnd_toStartOf="@+id/chB13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB10"
+            app:layout_constraintTop_toTopOf="@+id/chB10"
+            app:layout_constraintVertical_bias="0.872" />
+
+        <CheckBox
+            android:id="@+id/chB13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="45dp"
+            android:buttonTint="#000000"
+            app:layout_constraintBottom_toBottomOf="@+id/chB12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/chB12"
+            app:layout_constraintTop_toTopOf="@+id/chB12"
+            app:layout_constraintVertical_bias="0.872" />
+
+        <CheckBox
+            android:id="@+id/chB2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:buttonTint="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/chB1"
+            app:layout_constraintStart_toStartOf="@+id/chB1" />
+
+        <CheckBox
+            android:id="@+id/chB4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="14dp"
+            android:buttonTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/chB2"
+            app:layout_constraintEnd_toEndOf="@+id/chB5"
+            app:layout_constraintTop_toTopOf="@+id/chB2"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/chB7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:buttonTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/chB4"
+            app:layout_constraintStart_toEndOf="@+id/chB5"
+            app:layout_constraintTop_toTopOf="@+id/chB4" />
+
+        <CheckBox
+            android:id="@+id/chB9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:buttonTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/chB7"
+            app:layout_constraintStart_toEndOf="@+id/chB6"
+            app:layout_constraintTop_toTopOf="@+id/chB7"
+            app:layout_constraintVertical_bias="0.806" />
+
+        <CheckBox
+            android:id="@+id/chB11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:buttonTint="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/chB9"
+            app:layout_constraintStart_toEndOf="@+id/chB8"
+            app:layout_constraintTop_toTopOf="@+id/chB9"
+            app:layout_constraintVertical_bias="0.806" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
